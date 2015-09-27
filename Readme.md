@@ -1,5 +1,5 @@
 # cpp_terse_const 
-This a simple attempt to provide answer to two common issues when trying to enforce const-correctness on C++ code :
+This is a simple attempt to provide answer to two common issues when trying to enforce const-correctness on C++ code :
 - initialization of a complex const variable
 - verbosity and readability
 
@@ -13,8 +13,7 @@ http://herbsutter.com/2013/04/05/complex-initialization-for-a-const-variable/
 The example below shows the idiomatic C++14 of initializating a complex const variable through a lambda. 
 
 ```
-//construct and initialize vec
-//of type const std::vector<int>
+//construct and initialize vec of type const std::vector<int>
 const auto vec = [&]() { //define a lambda that initializes the vector
   std::vector<int> _vec;
   for (unsigned i = 0; i < 10; i++)  
@@ -35,8 +34,8 @@ const_initialize( std::vector<int>, vec,  // here, we define the type and name o
 
 ##### Remark
 Some people (such a me) like to disable variable shadowing (i.e add -Wshadow to the gcc flags)
-This macro is not compatible with that option
-We would need a better preprocessor !
+
+This macro is not compatible with that option : we would need a better preprocessor !
 
 
 # const_typedefs
