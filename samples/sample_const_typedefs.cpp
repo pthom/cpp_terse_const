@@ -14,7 +14,7 @@ class Foo
 {
 public:
   Foo(std::_string_ s) : mThing(s) { }
-  std::_string_ getThing() const //i.e const std::string& getBlah() const
+  std::_string_ getThing() const //i.e const std::string& getThing() const
   {
     return mThing;
   }

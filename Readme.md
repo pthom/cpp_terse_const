@@ -17,7 +17,7 @@ The example below shows the idiomatic C++14 of initializating a complex const va
 const auto vec = [&]() { //define a lambda that initializes the vector
   std::vector<int> _vec;
   for (unsigned i = 0; i < 10; i++)  
-    vec.push_back(i);  
+    _vec.push_back(i);  
   return _vec;
 }(); //run the lambda immediately
 ```
