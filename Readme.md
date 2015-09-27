@@ -43,7 +43,8 @@ This macro is not compatible with that option : we would need a better preproces
 This one is more controversial...
 I think that const ought to be the default, and we should not spend time reading and writing const in any given source code.
 
-So, the philosophy is, for any given class `Foo`to make its const variants very easy and fast to read and write :
+So, the philosophy is, for any given class `Foo`to make its const variants very easy and fast to read and write.
+So, it defines the following types:
   * `_Foo` is a typedef for `const Foo`
   * `_Foo_` is a typedef for `const Foo &`
   * `Foo_`is a typedef for `Foo &`
