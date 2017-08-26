@@ -32,10 +32,10 @@ const_initialize( std::vector<int>, vec,  // here, we define the type and name o
 );  
 ```
 
-##### Remark
-Some people (such a me) like to disable variable shadowing (i.e add -Wshadow to the gcc flags)
-
-This macro is not compatible with that option : we would need a better preprocessor !
+##### Remarks
+* Some people (such as me) like to disable variable shadowing (i.e add -Wshadow to the gcc flags). This macro is not compatible with that option.
+* Because of preprocessor limitations, the initialization code shall not contain comma characters (,). 
+You can overcome this limitation by using something like `#define COMMA ,` but this gets ugly.
 
 
 # const_typedefs
